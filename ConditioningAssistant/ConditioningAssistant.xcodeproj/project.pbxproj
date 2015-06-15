@@ -13,6 +13,7 @@
 		10634FB11B2B036700F8A484 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10634FB01B2B036700F8A484 /* Images.xcassets */; };
 		10634FB41B2B036700F8A484 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10634FB21B2B036700F8A484 /* LaunchScreen.xib */; };
 		10634FC01B2B036700F8A484 /* ConditioningAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10634FBF1B2B036700F8A484 /* ConditioningAssistantTests.swift */; };
+		10E81B7B1B2E8108008250D2 /* TriLvTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E81B7A1B2E8108008250D2 /* TriLvTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		10634FB91B2B036700F8A484 /* ConditioningAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConditioningAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10634FBE1B2B036700F8A484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10634FBF1B2B036700F8A484 /* ConditioningAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditioningAssistantTests.swift; sourceTree = "<group>"; };
+		10E81B7A1B2E8108008250D2 /* TriLvTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriLvTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		10634FA61B2B036700F8A484 /* ConditioningAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				10E81B7A1B2E8108008250D2 /* TriLvTableViewController.swift */,
 				10634FA91B2B036700F8A484 /* AppDelegate.swift */,
 				10634FAD1B2B036700F8A484 /* Main.storyboard */,
 				1031A1BB1B2BD49500552B21 /* ItemsViewController.swift */,
@@ -215,6 +218,7 @@
 			files = (
 				1031A1BC1B2BD49500552B21 /* ItemsViewController.swift in Sources */,
 				10634FAA1B2B036700F8A484 /* AppDelegate.swift in Sources */,
+				10E81B7B1B2E8108008250D2 /* TriLvTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

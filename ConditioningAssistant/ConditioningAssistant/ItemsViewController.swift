@@ -10,9 +10,9 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
-    var isFold = [true, true]
-    let sectionTitleArr = ["Section 1", "Section 2"]
-    let sectionListArr = [["New Zealand","Australia","Bangladesh","Sri Lanka"], ["India","South Africa","UAE","Pakistan"]]
+    var isFold = [false, false]
+    let sectionTitleArr = ["Group 1", "Group 2"]
+    let sectionListArr = [["胸部", "肩部", "手臂", "腹部"], ["腿部", "背部", "手臂", "腹部"]]
     
 
     override func viewDidLoad() {
@@ -48,12 +48,24 @@ class ItemsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
         
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
         if !isFold[indexPath.section] {
             cell.textLabel?.text = sectionListArr[indexPath.section][indexPath.row]
-            cell.backgroundColor = UIColor.greenColor()
+            cell.backgroundColor = UIColor.lightGrayColor()
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if (cell?.accessoryType == UITableViewCellAccessoryType.Checkmark) {
+            cell?.accessoryType = UITableViewCellAccessoryType.None
+        } else {
+            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -66,7 +78,7 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRectMake(0.0, 0.0, tableView.frame.size.width, 50.0))
-        headerView.backgroundColor = UIColor.blueColor()
+        headerView.backgroundColor = UIColor.grayColor()
         let headerString = UILabel(frame: CGRect(x: 10, y: 10, width: tableView.frame.size.width-10, height: 30)) as UILabel
         headerString.text = sectionTitleArr[section]
         headerView .addSubview(headerString)
